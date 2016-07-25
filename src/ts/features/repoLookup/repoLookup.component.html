@@ -1,0 +1,11 @@
+<div>
+    <h1>Public Repository Lookup</h1>
+    <form (submit)="getUserAndRepos(username.value)">
+        <input #username />
+        <button type="submit">
+            Find User
+        </button>
+    </form>
+    <user-display [user]="gitUser.user"></user-display>
+    <repo-list [repos]="gitUser.repos"></repo-list>
+</div>
